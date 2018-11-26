@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
 
 class ListContacts extends Component {
 
@@ -56,9 +57,21 @@ class ListContacts extends Component {
                   <p>{contact.name}</p>
                   <p>{contact.handle}</p>
                 </div>
+
+                <div>
+                    <button onClick= {() => this.props.onDeleteContact(contact)}>
+                        Remover contact
+                    </button>
+                </div>
               </li>
             ))}
           </ol>
+                
+     
+        <Link to='/create'>
+            Criar contato 
+        </Link>
+ 
         </div>
       )
     }
