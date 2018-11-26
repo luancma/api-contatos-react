@@ -29,7 +29,6 @@ class App extends Component {
   render() {
     return (
       <div>
-
       <Route exact path='/' render={() => (
         <ListContacts 
           contacts={this.state.contacts}
